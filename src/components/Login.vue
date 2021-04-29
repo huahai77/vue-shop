@@ -68,7 +68,7 @@ export default {
         this.$message.success("登录成功!");
         // console.log(res);
         //! 1.登录成功之后的token，保存到客户端的 sessionStorage 中
-        //!    1.1 项目中出了登录之外的其他API接口，必须在登陆之间才能访问
+        //!    1.1 项目中除了登录之外的其他API接口，必须在登陆之间才能访问
         //!    1.2 token 只应在当前网站打开期间生效，所以将 token 保存在 sessionStorage 中
         //!! setItem是设置
         window.sessionStorage.setItem("token", res.data.token);
@@ -96,7 +96,7 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-//! 头像
+/* //! 头像 */
   .avatar_box {
     width: 130px;
     height: 130px;
@@ -113,15 +113,16 @@ export default {
       background-color: #eee;
     }
   }
-// !用户和密码
+/* // !用户和密码 */
   .login_form {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 0 20px;
-    box-sizing: border-box; //怪异盒模型
+    /* //怪异盒模型 */
+    box-sizing: border-box; 
   }
-//! 按钮
+/* //! 按钮 */
   .btns {
     display: flex;
     justify-content: flex-end;
