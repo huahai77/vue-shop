@@ -427,8 +427,8 @@ export default {
       this.selectedRoleId = ''
       this.userInfo = {}
     }
-  }//!methods的结尾
-} 
+  },
+}//!methods的结尾
 </script>
 
 <style lang="less" scoped>
