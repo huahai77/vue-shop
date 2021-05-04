@@ -11,7 +11,7 @@
       <!-- 添加角色按钮 -->
       <el-row>
         <el-col>
-          <el-button type="primary">添加角色</el-button>
+          <el-button type="primary" @click="showAddRoleBox">添加角色</el-button>
         </el-col>
       </el-row>
       <!-- 角色列表区域  -->
@@ -76,6 +76,25 @@
         <el-button type="primary" @click="allotRights">确 定</el-button>
       </span>
     </el-dialog>
+
+    <!-- ------------------- -->
+    <!-- /*添加角色对话框*/ -->
+    <el-dialog title="添加角色" :visible.sync="addRoleVisible" width="50%">
+      <!-- 内容主体区域 -->
+      <el-form label-width="70px">
+        <el-form-item label="用户名" prop="roleName">
+          <el-input v-model="addRole.roleName"></el-input>
+        </el-form-item>
+        <el-form-item label="密码" prop="roleDesc">
+          <el-input v-model="addRole.roleDesc"></el-input>
+        </el-form-item>
+      </el-form>
+      <!-- 底部按钮区域 -->
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="addRoleVisible = false">取 消</el-button>
+        <el-button type="primary" @click="addRoleVisible = false">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -97,7 +116,13 @@ export default {
       // 默认选中的节点id值
       defKeys: [],
       // 当前即将分配权限的id
-      roleId: ''
+      roleId: '',
+      // 添加角色对话框
+      addRoleVisible: false,
+      addRole: {
+        roleDesc: '',
+        roleName: ''
+      }
     }
   }, //data结束
   created() {
@@ -190,7 +215,11 @@ export default {
       this.getRoleList()
       // 关闭对话框
       this.setRightsVisille = false
-    }
+    },
+    // 控制添加角色对话框的显示与隐藏
+    showAddRoleBox() {
+      this.addRoleVisible = true;
+    },
   },  //methods结束
 }
 </script>
