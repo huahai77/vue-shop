@@ -9,6 +9,9 @@ import Users from '@/views/home/children/Users'
 import Rights from '@/views/power/Rights'
 import Roles from '@/views/power/Roles'
 import Cate from '@/views/goods/Cate'
+import Params from '@/views/goods/Params'
+
+
 
 
 //!使用路由
@@ -35,7 +38,8 @@ const routes = [
       { path: '/users', component: Users },
       { path: '/rights', component: Rights},
       { path: '/roles', component: Roles},
-      { path: '/categories', component: Cate}
+      { path: '/categories', component: Cate},
+      { path: '/params', component: Params}
     ]
   },
 ]
