@@ -10,13 +10,14 @@ import Rights from '@/views/power/Rights'
 import Roles from '@/views/power/Roles'
 import Cate from '@/views/goods/Cate'
 import Params from '@/views/goods/Params'
+import GoodsList from '@/views/goods/List'
+import AddGoods from '@/views/goods/children/AddGoods'
 
 
 
 
-//!使用路由
+// !使用路由
 Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/',
@@ -39,7 +40,9 @@ const routes = [
       { path: '/rights', component: Rights},
       { path: '/roles', component: Roles},
       { path: '/categories', component: Cate},
-      { path: '/params', component: Params}
+      { path: '/params', component: Params},
+      { path: '/goods', component: GoodsList},
+      { path: '/goods/add', component: AddGoods }
     ]
   },
 ]
