@@ -251,9 +251,6 @@ export default {
           if(!valid) {
             return this.$message.error("请填写必填项")
           }
-          // 执行添加的业务逻辑
-          // lodash cloneDeep(value)
-          // 利用lodash深拷贝进行操作，而不破坏原来的addForm数据
           const form = _.cloneDeep(this.addForm)
           form.goods_cat = form.goods_cat.join(',')
           // 处理动态参数

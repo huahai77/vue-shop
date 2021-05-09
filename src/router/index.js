@@ -12,7 +12,7 @@ import Cate from '@/views/goods/Cate'
 import Params from '@/views/goods/Params'
 import GoodsList from '@/views/goods/List'
 import AddGoods from '@/views/goods/children/AddGoods'
-
+import Order from '@/views/home/children/order/Order'
 
 
 
@@ -42,7 +42,8 @@ const routes = [
       { path: '/categories', component: Cate},
       { path: '/params', component: Params},
       { path: '/goods', component: GoodsList},
-      { path: '/goods/add', component: AddGoods }
+      { path: '/goods/add', component: AddGoods },
+      { path: '/orders', component: Order }
     ]
   },
 ]
