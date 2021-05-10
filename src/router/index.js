@@ -5,15 +5,15 @@ import Home from '@/views/home/Home'
 
 //!子组件
 import Welcome from '@/views/home/children/Welcome'
-import Users from '@/views/home/children/Users'
+import Users from '@/views/user/Users'
 import Rights from '@/views/power/Rights'
 import Roles from '@/views/power/Roles'
 import Cate from '@/views/goods/Cate'
 import Params from '@/views/goods/Params'
 import GoodsList from '@/views/goods/List'
 import AddGoods from '@/views/goods/children/AddGoods'
-import Order from '@/views/home/children/order/Order'
-
+import Order from '@/views/order/Order'
+import Report from '@/views/report/Report'
 
 
 // !使用路由
@@ -43,7 +43,8 @@ const routes = [
       { path: '/params', component: Params},
       { path: '/goods', component: GoodsList},
       { path: '/goods/add', component: AddGoods },
-      { path: '/orders', component: Order }
+      { path: '/orders', component: Order },
+      { path: '/reports', component: Report }
     ]
   },
 ]
